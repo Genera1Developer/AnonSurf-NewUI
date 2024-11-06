@@ -52,6 +52,11 @@ scientific and popular understanding.
 ## NEW UI VERSION UPDATES ##
 
 ```text
-UI improved, and possible internal improvements if I get to it.  Leaving old version there for your personal preference
+UI improved, and possible internal improvements if I get to it.
+Leaving old version there for your personal preference
 ```
 
+### THIS IS RENAMED TO BE KatSurf!  THIS IS AN ENHANCED AND/OR SIMPLY EDITED VERSION OF ANONSURF!
+
+## FULL CREDITS TO https://github.com/ultrafunkamsterdam/
+(other than my edits obviously)
