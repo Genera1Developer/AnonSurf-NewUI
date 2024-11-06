@@ -1,11 +1,11 @@
 ```txt
       .o.                                          .oooooo..o                       .o88o. 
      .888.                                        d8P'    `Y8                       888 `" 
-    .8"888.     ooo. .oo.    .ooooo.  ooo. .oo.   Y88bo.      oooo  oooo  oooo d8b o888oo  
-   .8' `888.    `888P"Y88b  d88' `88b `888P"Y88b   `"Y8888o.  `888  `888  `888""8P  888    
-  .88ooo8888.    888   888  888   888  888   888       `"Y88b  888   888   888      888    
- .8'     `888.   888   888  888   888  888   888  oo     .d8P  888   888   888      888    
-o88o     o8888o o888o o888o `Y8bod8P' o888o o888o 8""88888P'   `V88V"V8P' d888b    o888o   
+    .8"888.     ooo. .oo.    .ooooo.  ooo. .oo.   Y88bo.      oooo  oooo  oooo d8b o888oo         |
+   .8' `888.    `888P"Y88b  d88' `88b `888P"Y88b   `"Y8888o.  `888  `888  `888""8P  888           |
+  .88ooo8888.    888   888  888   888  888   888       `"Y88b  888   888   888      888     =============      
+ .8'     `888.   888   888  888   888  888   888  oo     .d8P  888   888   888      888           |
+o88o     o8888o o888o o888o `Y8bod8P' o888o o888o 8""88888P'   `V88V"V8P' d888b    o888o          |
                                                                                      
 ```
 # AnonSurf #
@@ -36,4 +36,10 @@ scientific and popular understanding.
 ```
 
 ## Please respect their work and do not misuse the tool. ##
+
+## NEW UI VERSION UPDATES ##
+
+```text
+UI improved, and possible internal improvements if I get to it.  Leaving old version there for your personal preference
+```
 
