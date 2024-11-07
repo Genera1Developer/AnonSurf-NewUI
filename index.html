@@ -3,20 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TEST</title>
+  <title>KatSurf | Free Forever</title>
   <style>
+    /*this was edited in VSCODE and HOLY HELL is HTML boring */
     body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      background-color: black;
       font-family: monospace;
-      overflow: hidden;
+      background-color: black;
+      color: white;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow-x: hidden;
     }
 
-    pre {
+    .ascii-art {
       font-size: 16px;
       line-height: 1.2;
       white-space: pre;
@@ -25,16 +27,46 @@
       background-clip: text;
       -webkit-background-clip: text;
       animation: rainbow 5s linear infinite;
+      margin-top: 50px;
+      text-align: center;
     }
 
+    .download-button {
+      display: inline-block;
+      background-color: grey;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      margin: 20px;
+      border-radius: 5px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+    
+    .readme-container {
+      width: 80%;
+      max-width: 800px;
+      background-color: #1c1c1c;
+      padding: 20px;
+      border-radius: 8px;
+      margin: 20px;
+      color: #ddd;
+    }
+
+    /*RAINBOWWWWWWWWWWW*/
     @keyframes rainbow {
       0% { background-position: 0% 50%; }
       100% { background-position: 100% 50%; }
     }
   </style>
+  <!-- it took me way to long to find this -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
-  <pre>
+
+  <!-- ASCII Art Section -->
+  <pre class="ascii-art">
       _  °                  ,.,   '               ,  . .,  °    
       ,.·,       :´¨   ;\                 ;´   '· .,        ;'´    ,   ., _';\'  
     ,'   ,'\     .'´ ,·´::'\              .´  .-,    ';\      \:´¨¯:;'   `;::'\:'\ 
@@ -60,5 +92,30 @@
    \::::\:;:·´                           `*´°          '·-·'       `' · -':::''      '\::\;     '        
      '`*'´‘                                '                                          `*´‘          
   </pre>
+
+  <!-- Download Button lol-->
+  <a href="ill add soon" class="download-button">Download</a>
+
+  <!-- README shtuff -->
+  <div class="readme-container" id="readme-content">
+    <!-- readme content will be here -->
+  </div>
+
+  <script>
+    // fetch readme so I don't have to update this evey time I update it
+    fetch('README.md')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('README.md not found');
+        }
+        return response.text();
+      })
+      .then(markdown => {
+        document.getElementById("readme-content").innerHTML = marked.parse(markdown);
+      })
+      .catch(error => {
+        document.getElementById("readme-content").textContent = "Error loading README.md file: " + error.message;
+      });
+  </script>
 </body>
 </html>
