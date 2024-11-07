@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KatSurf | Free Forever</title>
+  <title>ASCII Art with Download and README</title>
   <style>
-    /*this was edited in VSCODE and HOLY HELL is HTML boring */
+    /* im tired, soI used chatgpt to edit some of it lol (I DONT USE CHATGPT FOR ANY OTHER CODE THIS SHIT IS JS TOO BORING */
     body {
       font-family: monospace;
       background-color: black;
@@ -18,6 +18,13 @@
       overflow-x: hidden;
     }
 
+    /* ASCII art container */
+    .ascii-art-container {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    /* ASCII art styles */
     .ascii-art {
       font-size: 16px;
       line-height: 1.2;
@@ -27,10 +34,18 @@
       background-clip: text;
       -webkit-background-clip: text;
       animation: rainbow 5s linear infinite;
-      margin-top: 50px;
-      text-align: center;
+      display: none; /* Hidden by default */
     }
 
+    /* Toggle link */
+    .toggle-link {
+      color: cyan;
+      cursor: pointer;
+      text-decoration: underline;
+      font-size: 18px;
+    }
+
+    /* Download button styles */
     .download-button {
       display: inline-block;
       background-color: grey;
@@ -43,7 +58,8 @@
       font-size: 18px;
       cursor: pointer;
     }
-    
+
+    /* README container styles */
     .readme-container {
       width: 80%;
       max-width: 800px;
@@ -54,19 +70,21 @@
       color: #ddd;
     }
 
-    /*RAINBOWWWWWWWWWWW*/
+    /* Keyframe animation for rainbow effect */
     @keyframes rainbow {
       0% { background-position: 0% 50%; }
       100% { background-position: 100% 50%; }
     }
   </style>
-  <!-- it took me way to long to find this -->
+  <!-- Include marked.js library for rendering Markdown -->
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
 
   <!-- ASCII Art Section -->
-  <pre class="ascii-art">
+  <div class="ascii-art-container">
+    <span class="toggle-link" onclick="toggleArt()">Show ASCII Art</span>
+    <pre class="ascii-art" id="ascii-art">
       _  °                  ,.,   '               ,  . .,  °    
       ,.·,       :´¨   ;\                 ;´   '· .,        ;'´    ,   ., _';\'  
     ,'   ,'\     .'´ ,·´::'\              .´  .-,    ';\      \:´¨¯:;'   `;::'\:'\ 
@@ -91,18 +109,33 @@
   \`*'´\::::::::;·'‘          `'\::\;:·´'\:::'\'   '      \::\:;'` ·:;:::::\::\'      \*´\:';        '‚    
    \::::\:;:·´                           `*´°          '·-·'       `' · -':::''      '\::\;     '        
      '`*'´‘                                '                                          `*´‘          
-  </pre>
+    </pre>
+  </div>
 
-  <!-- Download Button lol-->
-  <a href="ill add soon" class="download-button">Download</a>
+  <!-- Download Button -->
+  <a href="path/to/your/file.zip" class="download-button">Download</a>
 
-  <!-- README shtuff -->
+  <!-- README Container -->
   <div class="readme-container" id="readme-content">
-    <!-- readme content will be here -->
+    <!-- README content will be rendered here -->
   </div>
 
   <script>
-    // fetch readme so I don't have to update this evey time I update it
+    // Toggle ASCII art display
+    function toggleArt() {
+      const asciiArt = document.getElementById("ascii-art");
+      const toggleLink = document.querySelector(".toggle-link");
+
+      if (asciiArt.style.display === "none") {
+        asciiArt.style.display = "block";
+        toggleLink.textContent = "Hide ASCII Art";
+      } else {
+        asciiArt.style.display = "none";
+        toggleLink.textContent = "Show ASCII Art";
+      }
+    }
+
+    // Fetch the actual README.md file and render it
     fetch('README.md')
       .then(response => {
         if (!response.ok) {
