@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -11,9 +11,25 @@
       align-items: center;
       height: 100vh;
       margin: 0;
-      background-color: #f0f0f0;
+      background-color: black;
       font-family: monospace;
+      overflow: hidden;
+    }
+
+    pre {
+      font-size: 16px;
+      line-height: 1.2;
       white-space: pre;
+      color: transparent;
+      background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet);
+      background-clip: text;
+      -webkit-background-clip: text;
+      animation: rainbow 5s linear infinite;
+    }
+
+    @keyframes rainbow {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
     }
   </style>
 </head>
