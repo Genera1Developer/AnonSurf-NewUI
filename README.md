@@ -50,3 +50,16 @@ VSCodium Didn't help much either but I coded in there for a while
 So I had to use thonny to manualy install the packages
 from the Plugins Manager.
 ```
+
+
+
+
+
+
+
+
+
+
+# WILL NOT BE OUT FOR A WHILE LONGER! #
+
+### Due to problems with I assume, files and/or my computer and editors, I currently cannot compile it to an EXE file.  Will be out as soon as possible! 
