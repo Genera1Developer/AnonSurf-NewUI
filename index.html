@@ -1,8 +1,9 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="KatSurf | Free Forever">
   <title>KatSurf | Free Forever</title>
   <style>
     body {
@@ -18,7 +19,7 @@
     }
 
     .ascii-art {
-      font-size: 16px;
+      font-size: calc(12px + 0.5vw);
       line-height: 1.2;
       white-space: pre;
       color: transparent;
@@ -28,6 +29,8 @@
       animation: rainbow 5s linear infinite;
       margin-top: 50px;
       text-align: center;
+      max-width: 100%;
+      overflow-x: auto;
     }
 
     .download-button {
@@ -39,18 +42,19 @@
       text-decoration: none;
       margin: 20px;
       border-radius: 5px;
-      font-size: 18px;
+      font-size: calc(14px + 0.3vw);
       cursor: pointer;
     }
 
     .readme-container {
-      width: 80%;
+      width: 90%;
       max-width: 800px;
       background-color: #1c1c1c;
       padding: 20px;
       border-radius: 8px;
       margin: 20px;
       color: #ddd;
+      overflow-x: auto;
     }
 
     @keyframes rainbow {
@@ -92,7 +96,6 @@
   <li class="download-button">
   <a href="https://github.com/Genera1Developer/KatSurf/releases" target="_blank">Download Latest From GitHub</a>
   </li>
-
 
   <div class="readme-container" id="readme-content"></div>
 
