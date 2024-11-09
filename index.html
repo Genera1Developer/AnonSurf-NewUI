@@ -103,7 +103,7 @@
     fetch('README.md')
       .then(response => {
         if (!response.ok) {
-          throw new Error('README.md not found');
+          throw new Error('ERROR 404');
         }
         return response.text();
       })
@@ -111,7 +111,7 @@
         document.getElementById("readme-content").innerHTML = marked.parse(markdown);
       })
       .catch(error => {
-        document.getElementById("readme-content").textContent = "Error loading README.md file: " + error.message;
+        document.getElementById("readme-content").textContent = "Error loading file: " + error.message;
       });
   </script>
 </body>
